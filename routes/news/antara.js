@@ -3,17 +3,17 @@ const router = express.Router();
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// Endpoint: /api/news/antara/:type
-router.get('/:type', async (req, res) => {
+// Menggunakan :type? (tanda tanya) agar parameter bersifat opsional
+router.get('/:type?', async (req, res) => {
     try {
-        const { type } = req.params;
+        // Jika type tidak diisi, otomatis ambil kategori 'terpopuler'
+        const type = req.params.type || 'terpopuler'; 
         const searchParams = req.query.search;
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
 
         const feed = await parser.parseURL(ANTARA_RSS);
         
         let data = feed.items.map((item) => {
-            // Logika Regex untuk mengambil URL gambar dari tag <img> di dalam konten
             const imageMatch = item.content?.match(/\<img.+src\=(?:\"|\')(.+?)(?:\"|\')(?:.+?)\>/);
             const image = imageMatch ? imageMatch[1] : null;
 
@@ -26,7 +26,6 @@ router.get('/:type', async (req, res) => {
             };
         });
 
-        // Fitur Search
         if (searchParams) {
             data = data.filter(item => 
                 item.title.toLowerCase().includes(searchParams.toLowerCase())
