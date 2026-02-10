@@ -3,18 +3,26 @@ const router = express.Router();
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// Menggunakan :type? agar link /api/news/antara tidak error
+// Menggunakan path / agar parameter dikelola di index.js atau buat :type opsional
 router.get('/:type?', async (req, res) => {
     try {
-        // Jika tidak ada type, otomatis ambil 'terpopuler'
-        const type = req.params.type || 'terpopuler'; 
+        // Daftar kategori valid Antara News sebagai pengaman
+        const validCategories = ['terbaru', 'politik', 'ekonomi', 'bola', 'hiburan', 'tekno', 'otomotif'];
+        
+        let type = req.params.type || 'terbaru';
+        
+        // Cek jika kategori ada dalam daftar, jika tidak gunakan 'terbaru'
+        if (!validCategories.includes(type.toLowerCase())) {
+            type = 'terbaru';
+        }
+
         const searchParams = req.query.search;
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
 
         const feed = await parser.parseURL(ANTARA_RSS);
         
         let data = feed.items.map((item) => {
-            // Mengambil gambar dari tag <img> di dalam content
+            // Regex aman untuk ambil gambar
             const imageMatch = item.content?.match(/\<img.+src\=(?:\"|\')(.+?)(?:\"|\')(?:.+?)\>/);
             const image = imageMatch ? imageMatch[1] : null;
 
@@ -41,10 +49,11 @@ router.get('/:type?', async (req, res) => {
             result: data
         });
     } catch (e) {
-        res.status(400).json({ 
+        // Jika RSS gagal diakses, kirim pesan error tanpa membuat server crash
+        res.status(200).json({ 
             status: false, 
             creator: "BangBotz",
-            message: "Kategori tidak ditemukan atau API Antara sedang gangguan" 
+            message: "Gagal mengambil data dari Antara News. Pastikan kategori benar." 
         });
     }
 });
