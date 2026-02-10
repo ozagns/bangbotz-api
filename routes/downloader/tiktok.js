@@ -7,8 +7,11 @@ router.get('/', async (req, res) => {
     if (!url) return res.json({ status: false, message: "URL is required" });
 
     try {
-        // Menggunakan API sumber lain sebagai cadangan jika Danzy error
-        const response = await axios.get(`https://api.danzy.web.id/api/download/tiktok?url=${encodeURIComponent(url)}`);
+        const response = await axios.get(`https://api.danzy.web.id/api/download/tiktok?url=${encodeURIComponent(url)}`, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+            }
+        });
         
         res.json({
             status: true,
@@ -16,11 +19,10 @@ router.get('/', async (req, res) => {
             result: response.data 
         });
     } catch (e) {
-        // Menampilkan pesan error yang lebih jelas untuk debug
         res.json({ 
             status: false, 
             creator: "ozagns",
-            message: "API sumber sedang gangguan atau limit",
+            message: "Akses ditolak oleh sumber (403)",
             error: e.message 
         });
     }
