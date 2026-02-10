@@ -3,10 +3,10 @@ const router = express.Router();
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// Menggunakan :type? (tanda tanya) agar parameter bersifat opsional
+// Menggunakan :type? agar link /api/news/antara tidak error
 router.get('/:type?', async (req, res) => {
     try {
-        // Jika type tidak diisi, otomatis ambil kategori 'terpopuler'
+        // Jika tidak ada type, otomatis ambil 'terpopuler'
         const type = req.params.type || 'terpopuler'; 
         const searchParams = req.query.search;
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
@@ -14,6 +14,7 @@ router.get('/:type?', async (req, res) => {
         const feed = await parser.parseURL(ANTARA_RSS);
         
         let data = feed.items.map((item) => {
+            // Mengambil gambar dari tag <img> di dalam content
             const imageMatch = item.content?.match(/\<img.+src\=(?:\"|\')(.+?)(?:\"|\')(?:.+?)\>/);
             const image = imageMatch ? imageMatch[1] : null;
 
@@ -43,7 +44,7 @@ router.get('/:type?', async (req, res) => {
         res.status(400).json({ 
             status: false, 
             creator: "BangBotz",
-            message: "Something error or category not found" 
+            message: "Kategori tidak ditemukan atau API Antara sedang gangguan" 
         });
     }
 });
