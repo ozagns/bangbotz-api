@@ -6,7 +6,7 @@ const tiktokRoute = require('./routes/downloader/tiktok');
 const igRoute = require('./routes/downloader/ig');
 const cnnRoute = require('./routes/news/cnn');
 const cnbcRoute = require('./routes/news/cnbc');
-const antaraRoute = require('./routes/news/antara');
+const kumparanRoute = require('./routes/news/kumparan');
 
 app.use(express.json());
 
@@ -39,7 +39,7 @@ app.use('/api/download/tiktok', tiktokRoute);
 app.use('/api/download/ig', igRoute);
 app.use('/api/news/cnn', cnnRoute);
 app.use('/api/news/cnbc', cnbcRoute);
-app.use('/api/news/antara', antaraRoute);
+app.use('/api/news/kumparan', kumparanRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
