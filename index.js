@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 
-// Middleware agar API bisa membaca input JSON
+// Import Routes Modular
+const downloaderRoute = require('./routes/downloader');
+
 app.use(express.json());
 
-// 1. Tampilan Utama (Landing Page)
+// 1. Tampilan Utama (Landing Page Tetap Di Sini)
 app.get('/', (req, res) => {
     res.send(`
     <html>
@@ -16,7 +18,7 @@ app.get('/', (req, res) => {
                 <p>Fitur Tersedia:</p>
                 <ul style="text-align: left; display: inline-block;">
                     <li>✅ Check Status</li>
-                    <li>⏳ Downloader (Coming Soon)</li>
+                    <li>✅ Modular Downloader</li>
                     <li>⏳ Image Tools (Coming Soon)</li>
                 </ul>
             </div>
@@ -27,7 +29,11 @@ app.get('/', (req, res) => {
     `);
 });
 
-// 2. Endpoint Check Status
+// 2. Gunakan Route Modular
+// Semua request ke /api/download akan diarahkan ke routes/downloader.js
+app.use('/api/download', downloaderRoute);
+
+// 3. Endpoint Check Status
 app.get('/api/check', (req, res) => {
     res.json({ 
         status: "success", 
@@ -36,23 +42,4 @@ app.get('/api/check', (req, res) => {
     });
 });
 
-// 3. Template Endpoint Downloader (Bisa kamu isi logika dari bot WA)
-app.get('/api/download', async (req, res) => {
-    const { url, type } = req.query;
-    
-    if (!url) {
-        return res.status(400).json({ 
-            status: false, 
-            message: "Masukkan parameter url! 🕑" 
-        });
-    }
-
-    res.json({
-        status: "processing",
-        creator: "ozagns",
-        feature: type || "general",
-        note: "Masukkan logika bot WA kamu di sini 🕑"
-    });
-});
-
-module.exports = app; 
+module.exports = app;
