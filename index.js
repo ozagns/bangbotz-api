@@ -11,6 +11,7 @@ const republikaRoute = require('./routes/news/republika');
 const tempoRoute = require('./routes/news/tempo');
 const viceRoute = require('./routes/news/vice');
 const voaRoute = require('./routes/news/voa');
+const gempaRoute = require('./routes/information/gempa');
 
 app.use(express.json());
 
@@ -48,6 +49,7 @@ app.use('/api/news/republika', republikaRoute);
 app.use('/api/news/tempo', tempoRoute);
 app.use('/api/news/vice', viceRoute);
 app.use('/api/news/voa', voaRoute);
+app.use('/api/information/gempa', gempaRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
