@@ -9,7 +9,7 @@ const parser = new Parser({
 
 async function getAntaraNews(req, res) {
     try {
-        // Pemetaan kategori yang valid di Antara News
+        // Pemetaan kategori terbaru Antara News (Update 2026)
         const categories = {
             terbaru: 'terbaru',
             politik: 'politik',
@@ -17,13 +17,14 @@ async function getAntaraNews(req, res) {
             bola: 'bola',
             hiburan: 'hiburan',
             tekno: 'tekno',
-            otomotif: 'otomotif'
+            otomotif: 'otomotif',
+            warta-bumi: 'warta-bumi'
         };
 
         const type = categories[req.params.type] || 'terbaru';
         const searchParams = req.query.search;
         
-        // Perhatikan penambahan .xml di akhir URL
+        // URL RSS Antara terbaru menggunakan subfolder /ind/
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
 
         const feed = await parser.parseURL(ANTARA_RSS);
@@ -55,7 +56,7 @@ async function getAntaraNews(req, res) {
         res.json({ 
             status: false, 
             creator: "BangBotz",
-            message: `Gagal akses RSS Antara. Gunakan kategori: terbaru, politik, ekonomi, bola, hiburan, tekno, otomotif.`,
+            message: `Gagal akses RSS Antara. Gunakan kategori: terbaru, politik, ekonomi, bola, hiburan, tekno, otomotif. 🕑`,
             error: e.message
         });
     }
