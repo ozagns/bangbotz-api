@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 
-// 1. Import Routes Modular per File (Bukan lagi satu file downloader.js)
+// 1. Import Routes Modular
 const tiktokRoute = require('./routes/downloader/tiktok');
 const igRoute = require('./routes/downloader/ig');
+const cnnRoute = require('./routes/news/cnn');
 
 app.use(express.json());
 
-// 2. Tampilan Utama (Landing Page)
+// 2. Tampilan Utama (Update Daftar Fitur)
 app.get('/', (req, res) => {
     res.send(`
     <html>
@@ -18,9 +19,10 @@ app.get('/', (req, res) => {
             <div style="margin: 30px auto; width: 300px; padding: 20px; border: 1px dashed #444; border-radius: 10px;">
                 <p>Fitur Tersedia:</p>
                 <ul style="text-align: left; display: inline-block;">
-                    <li>Check Status</li>
-                    <li>TikTok Downloader</li>
-                    <li>IG Downloader</li>
+                    <li>✅ Check Status</li>
+                    <li>✅ TikTok Downloader</li>
+                    <li>✅ IG Downloader</li>
+                    <li>✅ CNN News (New)</li>
                 </ul>
             </div>
             <hr style="width: 200px; border: 0.5px solid #333;">
@@ -30,10 +32,10 @@ app.get('/', (req, res) => {
     `);
 });
 
-// 3. Gunakan Route Modular Baru
-// Alamat akan menjadi: bangbotz.vercel.app/api/download/tiktok
+// 3. Gunakan Route Modular
 app.use('/api/download/tiktok', tiktokRoute);
 app.use('/api/download/ig', igRoute);
+app.use('/api/news/cnn', cnnRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
