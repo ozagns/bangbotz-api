@@ -18,6 +18,7 @@ const gempaRoute = require('./routes/information/gempa');
 const weatherRoute = require('./routes/information/weather');
 const qrRoute = require('./routes/tools/qr');
 const qrDecoderRoute = require('./routes/tools/qrdecoder');
+const wifiQRRoute = require('./routes/tools/wifiqr');
 
 app.use(express.json());
 
@@ -59,6 +60,7 @@ app.use('/api/info/gempa', gempaRoute);
 app.use('/api/info/weather', weatherRoute);
 app.use('/api/tools/qr', qrRoute);
 app.use('/api/tools/qr-decode', qrDecoderRoute);
+app.use('/api/tools/wifi-qr', wifiQRRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
