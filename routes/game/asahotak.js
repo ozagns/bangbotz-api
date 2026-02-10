@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../../config');
-// Panggil langsung karena berada di sub-folder yang sama
+// Panggil langsung dari sub-folder 'data' di lokasi yang sama 🕑
 const soalData = require('./data/asahotak.json'); 
 
 router.get('/', (req, res) => {
@@ -14,11 +14,17 @@ router.get('/', (req, res) => {
             creator: config.creator,
             result: {
                 soal: result.pertanyaan,
-                jawaban: result.jawaban
+                jawaban: result.jawaban,
+                index: randomIndex + 1,
+                total_soal: soalData.length
             }
         });
     } catch (e) {
-        res.status(500).json({ status: false, error: e.message });
+        res.status(500).json({ 
+            status: false, 
+            creator: config.creator,
+            message: "Gagal memuat data soal 🕑" 
+        });
     }
 });
 
