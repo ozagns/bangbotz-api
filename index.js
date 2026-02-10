@@ -7,7 +7,7 @@ const igRoute = require('./routes/downloader/ig');
 const cnnRoute = require('./routes/news/cnn');
 const cnbcRoute = require('./routes/news/cnbc');
 const kumparanRoute = require('./routes/news/kumparan');
-const okezoneRoute = require('./routes/news/okezone');
+const republikaRoute = require('./routes/news/republika');
 
 app.use(express.json());
 
@@ -41,7 +41,7 @@ app.use('/api/download/ig', igRoute);
 app.use('/api/news/cnn', cnnRoute);
 app.use('/api/news/cnbc', cnbcRoute);
 app.use('/api/news/kumparan', kumparanRoute);
-app.use('/api/news/okezone', okezoneRoute);
+app.use('/api/news/republika', republikaRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
