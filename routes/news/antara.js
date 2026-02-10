@@ -7,24 +7,12 @@ const parser = new Parser({
     }
 });
 
-async function getAntaraNews(req, res) {
+// Fungsi Logika Scraper
+const fetchAntara = async (req, res) => {
     try {
-        // Pemetaan kategori terbaru Antara News (Update 2026)
-        const categories = {
-            terbaru: 'terbaru',
-            politik: 'politik',
-            ekonomi: 'ekonomi',
-            bola: 'bola',
-            hiburan: 'hiburan',
-            tekno: 'tekno',
-            otomotif: 'otomotif',
-            warta-bumi: 'warta-bumi'
-        };
-
-        const type = categories[req.params.type] || 'terbaru';
+        // Ambil kategori dari parameter URL, jika kosong gunakan 'terbaru'
+        const type = req.params.type || 'terbaru';
         const searchParams = req.query.search;
-        
-        // URL RSS Antara terbaru menggunakan subfolder /ind/
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
 
         const feed = await parser.parseURL(ANTARA_RSS);
@@ -53,16 +41,17 @@ async function getAntaraNews(req, res) {
             result: data
         });
     } catch (e) {
-        res.json({ 
+        res.status(200).json({ 
             status: false, 
             creator: "BangBotz",
-            message: `Gagal akses RSS Antara. Gunakan kategori: terbaru, politik, ekonomi, bola, hiburan, tekno, otomotif. 🕑`,
+            message: "Kategori tidak ditemukan atau RSS sedang gangguan",
             error: e.message
         });
     }
-}
+};
 
-router.get('/', getAntaraNews);
-router.get('/:type', getAntaraNews);
+// Daftarkan dua rute terpisah untuk menangani tanpa kategori & dengan kategori
+router.get('/', fetchAntara); 
+router.get('/:type', fetchAntara);
 
 module.exports = router;
