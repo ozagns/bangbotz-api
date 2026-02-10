@@ -3,25 +3,35 @@ const router = express.Router();
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// Fungsi utama scraper
 async function getAntaraNews(req, res) {
     try {
-        const type = req.params.type || 'terbaru';
+        // Daftar kategori resmi yang didukung Antara News
+        const categories = {
+            terbaru: 'terbaru',
+            politik: 'politik',
+            ekonomi: 'ekonomi',
+            bola: 'bola',
+            hiburan: 'hiburan',
+            tekno: 'tekno',
+            otomotif: 'otomotif',
+            terpopuler: 'terpopuler'
+        };
+
+        const type = categories[req.params.type] || 'terbaru';
         const searchParams = req.query.search;
+        // Pastikan format URL benar: /rss/[kategori].xml
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
 
         const feed = await parser.parseURL(ANTARA_RSS);
         
         let data = feed.items.map((item) => {
             const imageMatch = item.content?.match(/\<img.+src\=(?:\"|\')(.+?)(?:\"|\')(?:.+?)\>/);
-            const image = imageMatch ? imageMatch[1] : null;
-
             return {
                 title: item.title,
                 link: item.link,
                 description: item.contentSnippet?.replace("...", "").trim(),
                 date: item.isoDate,
-                image: image
+                image: imageMatch ? imageMatch[1] : null
             };
         });
 
@@ -34,21 +44,19 @@ async function getAntaraNews(req, res) {
         res.json({
             status: true,
             creator: "BangBotz",
-            message: `Result of type ${type} news in Antara News`,
             total: data.length,
             result: data
         });
     } catch (e) {
-        res.status(200).json({ 
+        res.json({ 
             status: false, 
             creator: "BangBotz",
-            message: "Kategori tidak ditemukan atau RSS sedang gangguan" 
+            message: "Gagal mengambil data." 
         });
     }
 }
 
-// Definisikan rute secara eksplisit untuk menghindari PathError 
-router.get('/', getAntaraNews); // Menangani /api/news/antara
-router.get('/:type', getAntaraNews); // Menangani /api/news/antara/politik
+router.get('/', getAntaraNews);
+router.get('/:type', getAntaraNews);
 
 module.exports = router;
