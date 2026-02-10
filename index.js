@@ -17,6 +17,7 @@ const voaRoute = require('./routes/news/voa');
 const gempaRoute = require('./routes/information/gempa');
 const weatherRoute = require('./routes/information/weather');
 const qrRoute = require('./routes/tools/qr');
+const qrDecoderRoute = require('./routes/tools/qrdecoder');
 
 app.use(express.json());
 
@@ -57,6 +58,7 @@ app.use('/api/news/voa', voaRoute);
 app.use('/api/info/gempa', gempaRoute);
 app.use('/api/info/weather', weatherRoute);
 app.use('/api/tools/qr', qrRoute);
+app.use('/api/tools/qrdecode', qrDecoderRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
