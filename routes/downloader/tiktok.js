@@ -4,14 +4,27 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 async function ttdown(url) {
+    const config = {
+        headers: {
+            'user-agent': 'Mozilla/5.0 (Linux; Android 10; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+            'accept-language': 'en-US,en;q=0.9',
+            'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
+            'sec-ch-ua-mobile': '?1',
+            'sec-ch-ua-platform': '"Android"',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'none',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1'
+        }
+    };
+
     try {
-        // 1. Ambil Cookie dan Token awal dari halaman depan
-        const { data: html, headers } = await axios.get('https://musicaldown.com/en', {
-            headers: { 
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36' 
-            }
-        });
+        // Step 1: Ambil Token & Cookie
+        const { data: html, headers } = await axios.get('https://musicaldown.com/en', config);
         const $ = cheerio.load(html);
+        const cookie = headers['set-cookie'] ? headers['set-cookie'].join('; ') : '';
         
         const payload = {};
         $('#submit-form input').each((i, elem) => {
@@ -20,43 +33,41 @@ async function ttdown(url) {
             if (name) payload[name] = value || '';
         });
         
-        // Cari field input yang kosong untuk menaruh URL TikTok
         const urlField = Object.keys(payload).find(key => !payload[key]);
         if (urlField) payload[urlField] = url;
-        
-        // 2. Kirim Post Request untuk mendapatkan link download
+
+        // Step 2: Kirim Post dengan Cookie
         const { data: resData } = await axios.post('https://musicaldown.com/download', new URLSearchParams(payload).toString(), {
             headers: {
-                'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                'cookie': headers['set-cookie'] ? headers['set-cookie'].join('; ') : '',
+                ...config.headers,
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': cookie,
                 'origin': 'https://musicaldown.com',
-                'referer': 'https://musicaldown.com/',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+                'referer': 'https://musicaldown.com/en'
             }
         });
         
         const $$ = cheerio.load(resData);
         const downloads = [];
         $$('a.download').each((i, elem) => {
-            const $elem = $$(elem);
-            const link = $elem.attr('href');
-            if (link && link !== '#') {
+            const link = $$(elem).attr('href');
+            if (link && !link.includes('facebook') && link !== '#') {
                 downloads.push({
-                    label: $elem.text().trim().replace(/\s+/g, ' '),
+                    label: $$(elem).text().trim().replace(/\s+/g, ' '),
                     url: link
                 });
             }
         });
 
-        if (downloads.length === 0) throw new Error("Video links not found. Check the TikTok URL.");
+        if (downloads.length === 0) throw new Error("Gagal mendapatkan link download. Coba link TikTok lain.");
         
         return {
-            title: $$('.video-desc').text().trim() || "TikTok Video",
-            author: $$('.video-author b').text().trim() || "Unknown",
+            title: $$('.video-desc').text().trim(),
+            author: $$('.video-author b').text().trim(),
             downloads: downloads
         };
     } catch (error) {
-        throw new Error("Scraper Error: " + error.message);
+        throw new Error(error.response?.status === 403 ? "IP Vercel diblokir oleh sumber (403)" : error.message);
     }
 }
 
@@ -72,11 +83,7 @@ router.get('/', async (req, res) => {
             result: result
         });
     } catch (e) {
-        res.status(500).json({ 
-            status: false, 
-            creator: "ozagns",
-            message: e.message 
-        });
+        res.json({ status: false, creator: "ozagns", message: e.message });
     }
 });
 
