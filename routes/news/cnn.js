@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 
         res.json({
             status: true,
-            creator: "ozagns",
+            creator: "BangBotz",
             total: result.length,
             result: result
         });

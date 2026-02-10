@@ -5,6 +5,7 @@ const app = express();
 const tiktokRoute = require('./routes/downloader/tiktok');
 const igRoute = require('./routes/downloader/ig');
 const cnnRoute = require('./routes/news/cnn');
+const cnbcRoute = require('./routes/news/cnbc');
 
 app.use(express.json());
 
@@ -26,7 +27,7 @@ app.get('/', (req, res) => {
                 </ul>
             </div>
             <hr style="width: 200px; border: 0.5px solid #333;">
-            <p style="color: #888;">Created by <b>ozagns</b></p>
+            <p style="color: #888;">Created by <b>BangBotz</b></p>
         </body>
     </html>
     `);
@@ -36,13 +37,14 @@ app.get('/', (req, res) => {
 app.use('/api/download/tiktok', tiktokRoute);
 app.use('/api/download/ig', igRoute);
 app.use('/api/news/cnn', cnnRoute);
+app.use('/api/news/cnbc', cnbcRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
     res.json({ 
         status: "success", 
         message: "Bangbotz API is ready!",
-        author: "ozagns" 
+        author: "BangBotz" 
     });
 });
 
