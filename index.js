@@ -58,7 +58,7 @@ app.use('/api/news/voa', voaRoute);
 app.use('/api/info/gempa', gempaRoute);
 app.use('/api/info/weather', weatherRoute);
 app.use('/api/tools/qr', qrRoute);
-app.use('/api/tools/qrdecode', qrDecoderRoute);
+app.use('/api/tools/qr-decode', qrDecoderRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
