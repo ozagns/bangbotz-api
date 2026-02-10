@@ -3,27 +3,19 @@ const router = express.Router();
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// Fungsi utama untuk fetch data Tribun berdasarkan zone
-const fetchTribun = async (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        // Jika tidak ada zone, default ke 'www' (nasional)
-        const zone = req.params.zone || 'www';
+        const VICE_RSS = "https://www.vice.com/id/rss?locale=id_id";
         const searchParams = req.query.search;
-        const TRIBUN_RSS = `https://${zone}.tribunnews.com/rss/`;
-
-        const feed = await parser.parseURL(TRIBUN_RSS);
+        
+        const feed = await parser.parseURL(VICE_RSS);
         
         let data = feed.items.map((item) => {
-            // Logika penggantian thumbnail ke gambar kualitas tinggi
-            const originalImg = item.enclosure?.url || null;
-            const highResImg = originalImg ? originalImg.replace("thumbnails2", "images") : null;
-
             return {
                 title: item.title,
                 link: item.link,
-                description: item.contentSnippet,
                 date: item.isoDate,
-                image: highResImg
+                image: item.enclosure?.url || null
             };
         });
 
@@ -37,7 +29,6 @@ const fetchTribun = async (req, res) => {
         res.json({
             status: true,
             creator: "BangBotz",
-            message: `Result of zone ${zone} news in Tribun News`,
             total: data.length,
             result: data
         });
@@ -45,13 +36,9 @@ const fetchTribun = async (req, res) => {
         res.status(400).json({ 
             status: false, 
             creator: "BangBotz",
-            message: "Gagal mengambil berita Tribun atau zona tidak valid" 
+            message: "Gagal mengambil berita Vice News" 
         });
     }
-};
-
-// Daftarkan rute eksplisit untuk menghindari PathError
-router.get('/', fetchTribun);
-router.get('/:zone', fetchTribun);
+});
 
 module.exports = router;
