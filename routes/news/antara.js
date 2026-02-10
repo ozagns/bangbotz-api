@@ -3,26 +3,16 @@ const router = express.Router();
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-// Menggunakan path / agar parameter dikelola di index.js atau buat :type opsional
-router.get('/:type?', async (req, res) => {
+// Fungsi utama scraper
+async function getAntaraNews(req, res) {
     try {
-        // Daftar kategori valid Antara News sebagai pengaman
-        const validCategories = ['terbaru', 'politik', 'ekonomi', 'bola', 'hiburan', 'tekno', 'otomotif'];
-        
-        let type = req.params.type || 'terbaru';
-        
-        // Cek jika kategori ada dalam daftar, jika tidak gunakan 'terbaru'
-        if (!validCategories.includes(type.toLowerCase())) {
-            type = 'terbaru';
-        }
-
+        const type = req.params.type || 'terbaru';
         const searchParams = req.query.search;
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
 
         const feed = await parser.parseURL(ANTARA_RSS);
         
         let data = feed.items.map((item) => {
-            // Regex aman untuk ambil gambar
             const imageMatch = item.content?.match(/\<img.+src\=(?:\"|\')(.+?)(?:\"|\')(?:.+?)\>/);
             const image = imageMatch ? imageMatch[1] : null;
 
@@ -49,13 +39,16 @@ router.get('/:type?', async (req, res) => {
             result: data
         });
     } catch (e) {
-        // Jika RSS gagal diakses, kirim pesan error tanpa membuat server crash
         res.status(200).json({ 
             status: false, 
             creator: "BangBotz",
-            message: "Gagal mengambil data dari Antara News. Pastikan kategori benar." 
+            message: "Kategori tidak ditemukan atau RSS sedang gangguan" 
         });
     }
-});
+}
+
+// Definisikan rute secara eksplisit untuk menghindari PathError 
+router.get('/', getAntaraNews); // Menangani /api/news/antara
+router.get('/:type', getAntaraNews); // Menangani /api/news/antara/politik
 
 module.exports = router;
