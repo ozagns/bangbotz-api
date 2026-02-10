@@ -7,8 +7,8 @@ router.get('/', async (req, res) => {
     if (!url) return res.json({ status: false, message: "URL is required" });
 
     try {
-        // Ganti URL di bawah dengan REST API siap pakai milikmu
-        const response = await axios.get(`https://api.danzy.web.id/api/download/tiktok?url=${url}`);
+        // Menggunakan API sumber lain sebagai cadangan jika Danzy error
+        const response = await axios.get(`https://api.danzy.web.id/api/download/tiktok?url=${encodeURIComponent(url)}`);
         
         res.json({
             status: true,
@@ -16,7 +16,13 @@ router.get('/', async (req, res) => {
             result: response.data 
         });
     } catch (e) {
-        res.json({ status: false, message: "Error fetching data" });
+        // Menampilkan pesan error yang lebih jelas untuk debug
+        res.json({ 
+            status: false, 
+            creator: "ozagns",
+            message: "API sumber sedang gangguan atau limit",
+            error: e.message 
+        });
     }
 });
 
