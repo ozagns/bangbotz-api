@@ -49,7 +49,7 @@ app.use('/api/news/republika', republikaRoute);
 app.use('/api/news/tempo', tempoRoute);
 app.use('/api/news/vice', viceRoute);
 app.use('/api/news/voa', voaRoute);
-app.use('/api/information/gempa', gempaRoute);
+app.use('/api/info/gempa', gempaRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
