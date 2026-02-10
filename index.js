@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
 
-// Import Routes Modular
-const downloaderRoute = require('./routes/downloader');
+// 1. Import Routes Modular per File (Bukan lagi satu file downloader.js)
+const tiktokRoute = require('./routes/downloader/tiktok');
+const igRoute = require('./routes/downloader/ig');
 
 app.use(express.json());
 
-// 1. Tampilan Utama (Landing Page Tetap Di Sini)
+// 2. Tampilan Utama (Landing Page)
 app.get('/', (req, res) => {
     res.send(`
     <html>
@@ -17,9 +18,9 @@ app.get('/', (req, res) => {
             <div style="margin: 30px auto; width: 300px; padding: 20px; border: 1px dashed #444; border-radius: 10px;">
                 <p>Fitur Tersedia:</p>
                 <ul style="text-align: left; display: inline-block;">
-                    <li>✅ Check Status</li>
-                    <li>✅ Modular Downloader</li>
-                    <li>⏳ Image Tools (Coming Soon)</li>
+                    <li>Check Status</li>
+                    <li>TikTok Downloader</li>
+                    <li>IG Downloader</li>
                 </ul>
             </div>
             <hr style="width: 200px; border: 0.5px solid #333;">
@@ -29,15 +30,16 @@ app.get('/', (req, res) => {
     `);
 });
 
-// 2. Gunakan Route Modular
-// Semua request ke /api/download akan diarahkan ke routes/downloader.js
-app.use('/api/download', downloaderRoute);
+// 3. Gunakan Route Modular Baru
+// Alamat akan menjadi: bangbotz.vercel.app/api/download/tiktok
+app.use('/api/download/tiktok', tiktokRoute);
+app.use('/api/download/ig', igRoute);
 
-// 3. Endpoint Check Status
+// 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
     res.json({ 
         status: "success", 
-        message: "Bangbotz API is ready! 🕑",
+        message: "Bangbotz API is ready!",
         author: "ozagns" 
     });
 });
