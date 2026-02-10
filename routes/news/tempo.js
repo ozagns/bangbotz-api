@@ -5,22 +5,18 @@ const parser = new Parser();
 
 router.get('/', async (req, res) => {
     try {
-        const SUARA_RSS = "https://www.suara.com/rss/";
+        const TEMPO_RSS = "http://rss.tempo.co/";
         const searchParams = req.query.search;
         
-        const feed = await parser.parseURL(SUARA_RSS);
+        const feed = await parser.parseURL(TEMPO_RSS);
         
         let data = feed.items.map((item) => {
-            const originalImg = item.enclosure?.url || '';
             return {
-                title: item.title?.replace("...", "").trim(),
+                title: item.title,
                 link: item.link,
-                description: item.contentSnippet?.trim(),
                 date: item.isoDate,
-                image: {
-                    small: originalImg,
-                    large: originalImg.replace(/q=\d+/, "q=100") // Optimasi kualitas gambar 🕑
-                }
+                // Tempo terkadang tidak menyertakan enclosure gambar secara default di RSS utama
+                image: item.enclosure?.url || null 
             };
         });
 
@@ -41,7 +37,7 @@ router.get('/', async (req, res) => {
         res.status(400).json({ 
             status: false, 
             creator: "BangBotz",
-            message: "Gagal mengambil berita Suara.com" 
+            message: "Gagal mengambil berita Tempo" 
         });
     }
 });

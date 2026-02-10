@@ -8,7 +8,7 @@ const cnnRoute = require('./routes/news/cnn');
 const cnbcRoute = require('./routes/news/cnbc');
 const kumparanRoute = require('./routes/news/kumparan');
 const republikaRoute = require('./routes/news/republika');
-const suaraRoute = require('./routes/news/suara');
+const tempoRoute = require('./routes/news/tempo');
 
 app.use(express.json());
 
@@ -43,7 +43,7 @@ app.use('/api/news/cnn', cnnRoute);
 app.use('/api/news/cnbc', cnbcRoute);
 app.use('/api/news/kumparan', kumparanRoute);
 app.use('/api/news/republika', republikaRoute);
-app.use('/api/news/suara', suaraRoute);
+app.use('/api/news/tempo', tempoRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
