@@ -7,27 +7,28 @@ router.get('/', async (req, res) => {
     try {
         const url = req.query.url;
 
-        // Validasi: Memastikan user mengirimkan link gambar
         if (!url) {
             return res.status(400).json({
                 status: false,
                 creator: config.creator,
-                message: "Silakan masukkan parameter url gambar QR! Contoh: ?url=https://link-gambar.com/qr.png"
+                message: "Masukkan parameter url gambar QR!"
             });
         }
 
-        // Proses pembacaan QR via QRServer
-        const response = await axios.get(`https://api.qrserver.com/v1/read-qr-code/?fileurl=${encodeURIComponent(url)}`);
+        // Gunakan encodeURIComponent dua kali jika perlu, atau pastikan URL bersih
+        const cleanUrl = encodeURIComponent(url.trim());
+        const apiUrl = `https://api.qrserver.com/v1/read-qr-code/?fileurl=${cleanUrl}`;
         
-        // Mengambil hasil dari struktur array QRServer
-        const result = response.data[0].symbol[0];
+        const response = await axios.get(apiUrl);
+        
+        // QRServer terkadang memberikan response sukses tapi datanya kosong
+        const result = response.data[0]?.symbol[0];
 
-        // Jika gambar bukan QR atau tidak terbaca
-        if (!result.data || result.error) {
+        if (!result || result.error || !result.data) {
             return res.status(400).json({
                 status: false,
                 creator: config.creator,
-                message: "QR Code tidak terdeteksi. Pastikan gambar jelas dan merupakan QR Code yang valid"
+                message: "QR Code tidak terbaca. Pastikan link gambar adalah direct link"
             });
         }
 
@@ -36,7 +37,7 @@ router.get('/', async (req, res) => {
             creator: config.creator,
             result: {
                 isi_qr: result.data,
-                format: result.seq || "Unknown"
+                format: result.seq
             }
         });
 
@@ -44,7 +45,7 @@ router.get('/', async (req, res) => {
         res.status(500).json({ 
             status: false, 
             creator: config.creator,
-            message: "Terjadi kesalahan sistem saat membaca QR" 
+            message: "Gagal menghubungi server QR" 
         });
     }
 });
