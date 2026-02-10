@@ -19,6 +19,7 @@ const weatherRoute = require('./routes/information/weather');
 const qrRoute = require('./routes/tools/qr');
 const qrDecoderRoute = require('./routes/tools/qrdecoder');
 const wifiQRRoute = require('./routes/tools/wifiqr');
+const asahOtakRoute = require('./routes/game/asahotak');
 
 app.use(express.json());
 
@@ -61,6 +62,7 @@ app.use('/api/info/weather', weatherRoute);
 app.use('/api/tools/qr', qrRoute);
 app.use('/api/tools/qr-decode', qrDecoderRoute);
 app.use('/api/tools/wifi-qr', wifiQRRoute);
+app.use('/api/game/asahotak', asahOtakRoute);
 
 // 4. Endpoint Check Status
 app.get('/api/check', (req, res) => {
