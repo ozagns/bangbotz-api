@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const Parser = require('rss-parser');
-const parser = new Parser();
+const parser = new Parser({
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+    }
+});
 
 async function getAntaraNews(req, res) {
     try {
-        // Daftar kategori resmi yang didukung Antara News
+        // Pemetaan kategori yang valid di Antara News
         const categories = {
             terbaru: 'terbaru',
             politik: 'politik',
@@ -13,13 +17,13 @@ async function getAntaraNews(req, res) {
             bola: 'bola',
             hiburan: 'hiburan',
             tekno: 'tekno',
-            otomotif: 'otomotif',
-            terpopuler: 'terpopuler'
+            otomotif: 'otomotif'
         };
 
         const type = categories[req.params.type] || 'terbaru';
         const searchParams = req.query.search;
-        // Pastikan format URL benar: /rss/[kategori].xml
+        
+        // Perhatikan penambahan .xml di akhir URL
         const ANTARA_RSS = `https://www.antaranews.com/rss/${type}.xml`;
 
         const feed = await parser.parseURL(ANTARA_RSS);
@@ -51,7 +55,8 @@ async function getAntaraNews(req, res) {
         res.json({ 
             status: false, 
             creator: "BangBotz",
-            message: "Gagal mengambil data." 
+            message: `Gagal akses RSS Antara. Gunakan kategori: terbaru, politik, ekonomi, bola, hiburan, tekno, otomotif.`,
+            error: e.message
         });
     }
 }
