@@ -1,5 +1,7 @@
 const express = require('express');
 const ffmpeg = require('fluent-ffmpeg');
+const ffmpegPath = require('ffmpeg-static');
+ffmpeg.setFfmpegPath(ffmpegPath);
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +15,7 @@ router.get('/', async (req, res) => {
 
     const words = text.split(' ');
     const timestamp = Date.now();
-    const tempDir = path.join(__dirname, `../../temp/brat_${timestamp}`);
+    const tempDir = path.join('/tmp', `brat_${timestamp}`);
     
     if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
 
