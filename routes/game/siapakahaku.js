@@ -1,18 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../../config');
-const soalData = require('./data/asahotak.json'); 
+const siapakahData = require('./data/siapakahaku.json'); 
 
 router.get('/', (req, res) => {
     try {
-        const randomIndex = Math.floor(Math.random() * soalData.length);
-        const result = soalData[randomIndex];
+        const randomIndex = Math.floor(Math.random() * siapakahData.length);
+        const result = siapakahData[randomIndex];
 
         res.json({
             status: true,
             creator: config.creator,
             result: {
-                soal: result.pertanyaan,
+                soal: result.soal || result.pertanyaan, // Handle jika ada perbedaan key
                 jawaban: result.jawaban
             }
         });
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
         res.status(500).json({ 
             status: false, 
             creator: config.creator,
-            message: "Gagal memuat data soal" 
+            message: "Gagal memuat soal Siapakah Aku" 
         });
     }
 });

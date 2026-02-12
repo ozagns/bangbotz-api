@@ -1,0 +1,842 @@
+[
+  {
+    "soal": "Sudah satu bulan lamanya kau tak memberiku kabar\nApakah ini cara kau say goodbye?\nSudah satu bulan lamanya aku ... sendiri\nBerusaha biasa saja tanpa dirimu",
+    "jawaban": "berjuang",
+    "lagu": "Satu Bulan",
+    "artis": "Bernadya"
+  },
+  {
+    "soal": "Kukira kita akan bersama\nBegitu banyak yang sama\nLatarmu dan latarku\n... kita berdua tidak sama",
+    "jawaban": "realitanya",
+    "lagu": "Hati-Hati di Jalan",
+    "artis": "Tulus"
+  },
+  {
+    "soal": "Aku tak tahu apa yang terjadi\nAntara aku dan kau\nYang ku tahu pasti\n... ini membunuhku",
+    "jawaban": "cinta",
+    "lagu": "Cinta Ini Membunuhku",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Bun, hidup berjalan seperti bajingan\nSeperti mereka yang lari dari ...\nNamun kita tetap di sini\nSaling bertaut satu sama lain",
+    "jawaban": "kenyataan",
+    "lagu": "Bertaut",
+    "artis": "Nadin Amizah"
+  },
+  {
+    "soal": "Dan terjadi lagi\nKisah lama yang ... kembali\nKau hancurkan aku dengan sikapmu\nTak sadarkah kau telah menyakitiku",
+    "jawaban": "terulang",
+    "lagu": "Separuh Aku",
+    "artis": "Noah"
+  },
+  {
+    "soal": "Semua kata rindumu semakin membuatku tak berdaya\nMenahan rasa ingin jumpa\nPercayalah padaku akupun rindu kamu\nKu akan ... melepas semua kerinduanku",
+    "jawaban": "datang",
+    "lagu": "Kangen",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Cukup sekali saja aku pernah merasa\nBetapa ... kehilanganmu\nKini aku berpaling\nMenuju kali kedua untuk mencintaimu",
+    "jawaban": "menyiksa",
+    "lagu": "Kali Kedua",
+    "artis": "Raisa"
+  },
+  {
+    "soal": "Sesaat kau hadir dalam kegelapan sepi\nMenyentuh hatiku yang sedang ...\nKau bawa cahaya dalam hidupku\nMembuatku merasa berarti lagi",
+    "jawaban": "terluka",
+    "lagu": "Sesaat Kau Hadir",
+    "artis": "Utha Likumahuwa"
+  },
+  {
+    "soal": "Ternyata belum siap aku\nKehilangan dirimu\nSetiap ... aku berdoa\nSemoga kau kembali ke pelukanku",
+    "jawaban": "malam",
+    "lagu": "Belum Siap Kehilangan",
+    "artis": "Stevan Pasaribu"
+  },
+  {
+    "soal": "Entah apa yang merasukimu\nHingga kau tega ... aku\nYang tulus mencintaimu\nDan selalu ada untukmu",
+    "jawaban": "mengkhianati",
+    "lagu": "Salah Apa Aku",
+    "artis": "Ilir7"
+  },
+{
+    "soal": "Sialnya hidup harus tetap berjalan\nMeski tanpamu di ...\nAku harus kuat, aku harus tabah\nMenghadapi kenyataan ini",
+    "jawaban": "sampingku",
+    "lagu": "Sial",
+    "artis": "Mahalini"
+  },
+  {
+    "soal": "Kau rumah yang nyaman\nNamun aku hanya ...\nYang singgah sebentar\nLalu harus pergi lagi",
+    "jawaban": "tamu",
+    "lagu": "Rumah Singgah",
+    "artis": "Fabio Asher"
+  },
+  {
+    "soal": "Aku bukan siapa-siapa\nBagi dirimu yang sudah punya ...\nNamun hatiku tak bisa berbohong\nBahwa aku masih mencintaimu",
+    "jawaban": "kekasih",
+    "lagu": "Bukan Siapa-Siapa",
+    "artis": "Maudy Ayunda"
+  },
+  {
+    "soal": "Rayu aku dengan kata-katamu\nBuat aku merasa yang paling ...\nDi dunia ini hanya ada kita\nTanpa ada orang lain di antara kita",
+    "jawaban": "cantik",
+    "lagu": "Rayu",
+    "artis": "Marion Jola"
+  },
+  {
+    "soal": "Kita adalah sepasang sepatu\nSelalu bersama tak bisa ...\nNamun tak pernah bisa bersatu\nKarena kita tak searah",
+    "jawaban": "berpisah",
+    "lagu": "Sepatu",
+    "artis": "Tulus"
+  },
+  {
+    "soal": "Meskipun kau telah pergi jauh\nAku tetap menunggu di sini\nSampai ... jadi debu\nAku akan selalu mencintaimu",
+    "jawaban": "kita",
+    "lagu": "Sampai Jadi Debu",
+    "artis": "Banda Neira"
+  },
+  {
+    "soal": "Resah hati ini tanpamu\nMemikirkan keberadaanmu yang entah di mana\nSemoga kau baik-baik saja\nDi ... sana yang jauh dari dekapanmu",
+    "jawaban": "luar",
+    "lagu": "Resah Jadi Luka",
+    "artis": "Daun Jatuh"
+  },
+  {
+    "soal": "Jangan datang lagi ke masa laluku\nKarena aku sudah ...\nDengan hidupku yang sekarang\nTanpa ada bayang-bayangmu lagi",
+    "jawaban": "bahagia",
+    "lagu": "Masa Lalu",
+    "artis": "Ziva Magnolya"
+  },
+  {
+    "soal": "Kita yang dulu pun tak begini\nBaru sebentar saja kau sudah ...\nApakah ini akhir dari segalanya\nAtau hanya ujian bagi cinta kita",
+    "jawaban": "berbeda",
+    "lagu": "Putus Atau Terus",
+    "artis": "Judika"
+  },
+  {
+    "soal": "Sempurna cintamu, kau buat aku merasa berarti\nTakkan pernah ada yang bisa ...\nPosisi dirimu di dalam hatiku\nKarena kau adalah segalanya bagiku",
+    "jawaban": "menggantikan",
+    "lagu": "Sempurna",
+    "artis": "Andra and The Backbone"
+  },
+  {
+    "soal": "Sudah satu bulan lamanya kau tak memberiku kabar\nApakah ini cara kau say goodbye?\nSudah satu bulan lamanya aku ... sendiri\nBerusaha biasa saja tanpa dirimu",
+    "jawaban": "berjuang",
+    "lagu": "Satu Bulan",
+    "artis": "Bernadya"
+  },
+  {
+    "soal": "Kukira kita akan bersama\nBegitu banyak yang sama\nLatarmu dan latarku\n... kita berdua tidak sama",
+    "jawaban": "realitanya",
+    "lagu": "Hati-Hati di Jalan",
+    "artis": "Tulus"
+  },
+  {
+    "soal": "Dan terjadi lagi\nKisah lama yang ... kembali\nKau hancurkan aku dengan sikapmu\nTak sadarkah kau telah menyakitiku",
+    "jawaban": "terulang",
+    "lagu": "Separuh Aku",
+    "artis": "Noah"
+  },
+  {
+    "soal": "Semua kata rindumu semakin membuatku tak berdaya\nMenahan rasa ingin jumpa\nPercayalah padaku akupun rindu kamu\nKu akan ... melepas semua kerinduanku",
+    "jawaban": "datang",
+    "lagu": "Kangen",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Bun, hidup berjalan seperti bajingan\nSeperti mereka yang lari dari ...\nNamun kita tetap di sini\nSaling bertaut satu sama lain",
+    "jawaban": "kenyataan",
+    "lagu": "Bertaut",
+    "artis": "Nadin Amizah"
+  },
+  {
+    "soal": "Cukup sekali saja aku pernah merasa\nBetapa ... kehilanganmu\nKini aku berpaling\nMenuju kali kedua untuk mencintaimu",
+    "jawaban": "menyiksa",
+    "lagu": "Kali Kedua",
+    "artis": "Raisa"
+  },
+  {
+    "soal": "Mungkin suatu saat nanti, kau kan mengerti\nBahwa cintaku ini takkan pernah mati\nWalau kita tak lagi bersama\nKau tetap ada di dalam ... ini",
+    "jawaban": "hati",
+    "lagu": "Mungkin Nanti",
+    "artis": "Peterpan"
+  },
+  {
+    "soal": "Ternyata belum siap aku\nKehilangan dirimu\nSetiap ... aku berdoa\nSemoga kau kembali ke pelukanku",
+    "jawaban": "malam",
+    "lagu": "Belum Siap Kehilangan",
+    "artis": "Stevan Pasaribu"
+  },
+  {
+    "soal": "Entah apa yang merasukimu\nHingga kau tega ... aku\nYang tulus mencintaimu\nDan selalu ada untukmu",
+    "jawaban": "mengkhianati",
+    "lagu": "Salah Apa Aku",
+    "artis": "Ilir7"
+  },
+  {
+    "soal": "Jangan kau gantung hatiku\nDengan sikap ... yang hanya sementara\nAku butuh kepastian darimu\nBukan hanya janji-janji palsu",
+    "jawaban": "manis",
+    "lagu": "Gantung",
+    "artis": "Melly Goeslaw"
+  },
+  {
+    "soal": "Mungkin hari ini hari esok atau nanti\nTak lagi saling menyapa\nMungkin hari ini hari esok atau nanti\nKita tak lagi ...",
+    "jawaban": "bersama",
+    "lagu": "Mungkin Hari Ini Esok Atau Nanti",
+    "artis": "Anneth"
+  },
+  {
+    "soal": "Tak sengaja lewat depan rumahmu\nKulihat ada ... kuning melengkung\nJanur kuning melengkung di depan rumahmu\nTanda kau telah menjadi milik orang lain",
+    "jawaban": "janur",
+    "lagu": "Janur Kuning",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Aku ingin ... bersamamu selamanya\nMenjalani hidup dengan penuh cinta\nTanpa ada rasa takut kehilangan\nKarena kau adalah rumah bagiku",
+    "jawaban": "pulang",
+    "lagu": "Pulang",
+    "artis": "Float"
+  },
+  {
+    "soal": "Tak ada lagi yang bisa kurasakan\nSelain ... di dalam hatiku\nTanpa dirimu di sisiku\nSemuanya terasa begitu sunyi",
+    "jawaban": "hampa",
+    "lagu": "Hampa",
+    "artis": "Ari Lasso"
+  },
+  {
+    "soal": "Dulu kita pernah saling mencintai\nNamun sekarang kita saling ...\nApakah ini yang dinamakan takdir\nAtau hanya kebetulan semata",
+    "jawaban": "menyakiti",
+    "lagu": "Kenangan Terindah",
+    "artis": "Samsons"
+  },
+  {
+    "soal": "Seberapa pantas kau menyakitiku\nSeberapa ... kau meninggalkanku\nAku tetap di sini menunggumu\nWalau kutahu kau takkan kembali",
+    "jawaban": "jauh",
+    "lagu": "Seberapa Pantas",
+    "artis": "Sheila On 7"
+  },
+  {
+    "soal": "Dengarkanlah wanita pujaanku\nMalam ini akan kusampaikan\nBetapa aku mencintaimu\nDan ingin ... hidup bersamamu",
+    "jawaban": "selalu",
+    "lagu": "Wanita Pujaanku",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya angin yang bisa\nMembisikkan kata-kata rindu\nKe dalam ... yang paling dalam\nBahwa aku sangat merindukanmu",
+    "jawaban": "jiwa",
+    "lagu": "Hanya Angin",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Menghitung hari satu-satu\nAku rindu padamu\nKapan kita bisa ... lagi\nSeperti dulu saat kita masih bersama",
+    "jawaban": "bertemu",
+    "lagu": "Menghitung Hari",
+    "artis": "Krisdayanti"
+  },
+  {
+    "soal": "Cintaku luar biasa, setinggi langit di angkasa\nTakkan pernah ada yang bisa ...\nBetapa besarnya cintaku padamu\nKarena kau adalah anugerah terindah bagiku",
+    "jawaban": "mengukur",
+    "lagu": "Cintaku",
+    "artis": "Chrisye"
+  },
+{
+    "soal": "Sudah satu bulan lamanya kau tak memberiku kabar\nApakah ini cara kau say goodbye?\nSudah satu bulan lamanya aku ... sendiri\nBerusaha biasa saja tanpa dirimu",
+    "jawaban": "berjuang",
+    "lagu": "Satu Bulan",
+    "artis": "Bernadya"
+  },
+  {
+    "soal": "Untungnya bumi masih berputar\nUntungnya ku tak ... di masa lalu\nAda banyak hal yang harus kukejar\nTanpa harus selalu mengingatmu",
+    "jawaban": "terjebak",
+    "lagu": "Untungnya, Hidup Harus Tetap Berjalan",
+    "artis": "Bernadya"
+  },
+  {
+    "soal": "Evaluasi, apa yang salah dari diriku\nMungkin aku terlalu ... padamu\nHingga lupa cara mencintai diriku sendiri\nDan akhirnya aku yang tersakiti",
+    "jawaban": "berharap",
+    "lagu": "Evaluasi",
+    "artis": "Hindia"
+  },
+  {
+    "soal": "Secukupnya saja kita mencintai\nJangan sampai kita ... diri\nKarena apa yang kita punya hari ini\nBisa saja hilang esok pagi",
+    "jawaban": "kehilangan",
+    "lagu": "Secukupnya",
+    "artis": "Hindia"
+  },
+  {
+    "soal": "Rayu aku dengan kata-katamu\nBuat aku merasa yang paling cantik\nDi dunia ini hanya ada kita\nTanpa ada ... lain di antara kita",
+    "jawaban": "orang",
+    "lagu": "Rayu",
+    "artis": "Marion Jola"
+  },
+  {
+    "soal": "Kita adalah sepasang sepatu\nSelalu bersama tak bisa berpisah\nNamun tak pernah bisa ...\nKarena kita tak searah",
+    "jawaban": "bersatu",
+    "lagu": "Sepatu",
+    "artis": "Tulus"
+  },
+  {
+    "soal": "Meskipun kau telah pergi jauh\nAku tetap menunggu di sini\nSampai kita jadi ...\nAku akan selalu mencintaimu",
+    "jawaban": "debu",
+    "lagu": "Sampai Jadi Debu",
+    "artis": "Banda Neira"
+  },
+  {
+    "soal": "Resah hati ini tanpamu\nMemikirkan keberadaanmu yang entah di mana\nSemoga kau baik-baik saja\nDi ... sana yang jauh dari dekapanmu",
+    "jawaban": "luar",
+    "lagu": "Resah Jadi Luka",
+    "artis": "Daun Jatuh"
+  },
+  {
+    "soal": "Jangan datang lagi ke masa laluku\nKarena aku sudah bahagia\nDengan hidupku yang sekarang\nTanpa ada ... mu lagi",
+    "jawaban": "bayang-bayang",
+    "lagu": "Masa Lalu",
+    "artis": "Ziva Magnolya"
+  },
+  {
+    "soal": "Sempurna cintamu, kau buat aku merasa berarti\nTakkan pernah ada yang bisa menggantikan\n... dirimu di dalam hatiku\nKarena kau adalah segalanya bagiku",
+    "jawaban": "posisi",
+    "lagu": "Sempurna",
+    "artis": "Andra and The Backbone"
+  },
+  {
+    "soal": "Dunia tipu-tipu, kamu satu yang nyata\nSaat aku ..., kamu yang memelukku\nMemberikan rasa tenang yang tak pernah\nKudapatkan dari siapapun sebelumnya",
+    "jawaban": "rapuh",
+    "lagu": "Dunia Tipu-Tipu",
+    "artis": "Yura Yunita"
+  },
+  {
+    "soal": "Kukira kita akan bersama\nBegitu banyak yang sama\nLatarmu dan latarku\nRealitanya kita berdua tidak ...",
+    "jawaban": "sama",
+    "lagu": "Hati-Hati di Jalan",
+    "artis": "Tulus"
+  },
+  {
+    "soal": "Aku tak tahu apa yang terjadi\nAntara aku dan kau\nYang ku tahu pasti\n... ini membunuhku",
+    "jawaban": "cinta",
+    "lagu": "Cinta Ini Membunuhku",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Bun, hidup berjalan seperti bajingan\nSeperti mereka yang lari dari kenyataan\nNamun kita tetap di sini\nSaling ... satu sama lain",
+    "jawaban": "bertaut",
+    "lagu": "Bertaut",
+    "artis": "Nadin Amizah"
+  },
+  {
+    "soal": "Dan terjadi lagi\nKisah lama yang terulang kembali\nKau hancurkan aku dengan ... mu\nTak sadarkah kau telah menyakitiku",
+    "jawaban": "sikap",
+    "lagu": "Separuh Aku",
+    "artis": "Noah"
+  },
+  {
+    "soal": "Semua kata rindumu semakin membuatku tak berdaya\nMenahan rasa ingin jumpa\nPercayalah padaku akupun ... kamu\nKu akan datang melepas semua kerinduanku",
+    "jawaban": "rindu",
+    "lagu": "Kangen",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Cukup sekali saja aku pernah merasa\nBetapa menyiksa kehilanganmu\nKini aku ...\nMenuju kali kedua untuk mencintaimu",
+    "jawaban": "berpaling",
+    "lagu": "Kali Kedua",
+    "artis": "Raisa"
+  },
+  {
+    "soal": "Mungkin suatu saat nanti, kau kan mengerti\nBahwa cintaku ini takkan pernah mati\nWalau kita tak lagi bersama\nKau tetap ada di dalam ... ini",
+    "jawaban": "hati",
+    "lagu": "Mungkin Nanti",
+    "artis": "Peterpan"
+  },
+  {
+    "soal": "Ternyata belum siap aku\nKehilangan dirimu\nSetiap malam aku ...\nSemoga kau kembali ke pelukanku",
+    "jawaban": "berdoa",
+    "lagu": "Belum Siap Kehilangan",
+    "artis": "Stevan Pasaribu"
+  },
+  {
+    "soal": "Entah apa yang merasukimu\nHingga kau tega mengkhianati aku\nYang ... mencintaimu\nDan selalu ada untukmu",
+    "jawaban": "tulus",
+    "lagu": "Salah Apa Aku",
+    "artis": "Ilir7"
+  },
+  {
+    "soal": "Jangan kau gantung hatiku\nDengan sikap manis yang hanya sementara\nAku butuh ... darimu\nBukan hanya janji-janji palsu",
+    "jawaban": "kepastian",
+    "lagu": "Gantung",
+    "artis": "Melly Goeslaw"
+  },
+  {
+    "soal": "Tak sengaja lewat depan rumahmu\nKulihat ada janur kuning ...\nTanda kau telah menjadi milik orang lain\ndan aku harus merelakanmu",
+    "jawaban": "melengkung",
+    "lagu": "Janur Kuning",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Aku rindu setengah mati kepadamu\nSungguh ku tak bisa ... tanpamu\nKembalilah padaku sayang\nAku sangat membutuhkanmu",
+    "jawaban": "hidup",
+    "lagu": "Rindu Setengah Mati",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Tak ada lagi yang bisa kurasakan\nSelain hampa di dalam hatiku\nTanpa ... di sisiku\nSemuanya terasa begitu sunyi",
+    "jawaban": "dirimu",
+    "lagu": "Hampa",
+    "artis": "Ari Lasso"
+  },
+  {
+    "soal": "Seberapa pantas kau menyakitiku\nSeberapa jauh kau meninggalkanku\nAku tetap di sini ...\nWalau kutahu kau takkan kembali",
+    "jawaban": "menunggumu",
+    "lagu": "Seberapa Pantas",
+    "artis": "Sheila On 7"
+  },
+  {
+    "soal": "Dengarkanlah wanita pujaanku\nMalam ini akan kusampaikan\nBetapa aku mencintaimu\nDan ingin ... hidup bersamamu",
+    "jawaban": "selalu",
+    "lagu": "Wanita Pujaanku",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya angin yang bisa\nMembisikkan kata-kata ...\nKe dalam jiwa yang paling dalam\nBahwa aku sangat merindukanmu",
+    "jawaban": "rindu",
+    "lagu": "Hanya Angin",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Menghitung hari satu-satu\nAku rindu padamu\nKapan kita bisa bertemu lagi\nSeperti dulu saat kita masih ...",
+    "jawaban": "bersama",
+    "lagu": "Menghitung Hari",
+    "artis": "Krisdayanti"
+  },
+  {
+    "soal": "Cintaku luar biasa, setinggi langit di angkasa\nTakkan pernah ada yang bisa mengukur\nBetapa ... cintaku padamu\nKarena kau adalah anugerah terindah bagiku",
+    "jawaban": "besarnya",
+    "lagu": "Cintaku",
+    "artis": "Chrisye"
+  },
+  {
+    "soal": "Sudah terlalu lama aku sendiri\nSudah terlalu lama aku asyik sendiri\nLama-lama aku bosan ...\nKarena tak ada yang bisa kuajak bicara",
+    "jawaban": "sendiri",
+    "lagu": "Terlalu Lama Sendiri",
+    "artis": "Kunto Aji"
+  },
+  {
+    "soal": "Sialnya hidup harus tetap berjalan\nMeski tanpamu di sampingku\nAku harus ..., aku harus tabah\nMenghadapi kenyataan ini",
+    "jawaban": "kuat",
+    "lagu": "Sial",
+    "artis": "Mahalini"
+  },
+  {
+    "soal": "Katakanlah sekarang bahwa kau tak cinta\nAku kan pergi menjauh dari hidupmu\nJangan beri aku ... palsu\nYang hanya akan menyakitiku",
+    "jawaban": "harapan",
+    "lagu": "Tolong",
+    "artis": "Budi Doremi"
+  },
+  {
+    "soal": "Mungkin hari ini hari esok atau nanti\nTak lagi saling ...\nMungkin hari ini hari esok atau nanti\nKita tak lagi bersama",
+    "jawaban": "menyapa",
+    "lagu": "Mungkin Hari Ini Esok Atau Nanti",
+    "artis": "Anneth"
+  },
+  {
+    "soal": "Pergi saja kau dari hidupku\nBawa semua kenangan manismu\nAku tak ingin lagi ...\nMelihat wajahmu yang penuh dusta",
+    "jawaban": "melihat",
+    "lagu": "Pergi Saja",
+    "artis": "Geisha"
+  },
+  {
+    "soal": "Aku yang dulu bukanlah yang sekarang\nDulu ditendang sekarang ku ...\nDulu dulu dulu ku menderita\nSekarang aku bahagia",
+    "jawaban": "disayang",
+    "lagu": "Aku Yang Dulu",
+    "artis": "Tegar"
+  },
+  {
+    "soal": "Lathi, kowe ra iso mbelenggu aku\nKowe ra iso ngatur aku\nAku punya ... sendiri\nUntuk menentukan jalan hidupku",
+    "jawaban": "cara",
+    "lagu": "Lathi",
+    "artis": "Weird Genius"
+  },
+  {
+    "soal": "Jangan datang lagi ke hidupku\nJangan ganggu aku lagi\nAku sudah tenang tanpamu\nJangan buat aku ... kembali",
+    "jawaban": "terluka",
+    "lagu": "Jangan Datang Lagi",
+    "artis": "Radja"
+  },
+  {
+    "soal": "Hampa hatiku tanpa dirimu\nSepi hari-hariku tanpa tawamu\nKembalilah padaku ...\nAku tak bisa hidup tanpamu",
+    "jawaban": "kasih",
+    "lagu": "Hampa",
+    "artis": "Ari Lasso"
+  },
+  {
+    "soal": "Seberapa sering kau menyakitiku\nSeberapa jauh kau meninggalkanku\nAku tetap setia ...\nWalau kau tak pernah menganggapku ada",
+    "jawaban": "menunggumu",
+    "lagu": "Seberapa Pantas",
+    "artis": "Sheila On 7"
+  },
+  {
+    "soal": "Dengarkanlah suara hatiku\nYang selalu memanggil namamu\nAku mencintaimu dengan ...\nTakkan pernah ada yang lain",
+    "jawaban": "tulus",
+    "lagu": "Wanita Pujaanku",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya angin yang bisa membawa\nPesan rinduku untukmu\nSemoga kau mendengarnya di sana\nDan segera ... ke pelukanku",
+    "jawaban": "kembali",
+    "lagu": "Hanya Angin",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Menghitung bintang di langit\nAku ingat saat kita bersama\nTertawa ceria di bawah ...\nTanpa ada beban di pikiran kita",
+    "jawaban": "rembulan",
+    "lagu": "Menghitung Hari",
+    "artis": "Krisdayanti"
+  },
+  {
+    "soal": "Cintaku takkan pernah luntur\nWalau waktu terus berjalan\nKau adalah ... hidupku\nYang takkan pernah tergantikan",
+    "jawaban": "belahan",
+    "lagu": "Cintaku",
+    "artis": "Chrisye"
+  },
+  {
+    "soal": "Sudah terlalu lama aku memendam\nRasa cinta yang begitu besar padamu\nKapan kau kan ...\nBahwa aku sangat mencintaimu",
+    "jawaban": "sadar",
+    "lagu": "Terlalu Lama Sendiri",
+    "artis": "Kunto Aji"
+  },
+  {
+    "soal": "Cinta ini takkan pernah mati\nWalau raga ini tak lagi ada\nKau adalah cinta ...\nYang akan selalu kuingat",
+    "jawaban": "sejatiku",
+    "lagu": "Cinta Sejati",
+    "artis": "BCL"
+  },
+  {
+    "soal": "Jangan kau pernah meragukan\nKesetiaan yang kuberikan padamu\nAku hanya milikmu seorang\nDan takkan pernah ...",
+    "jawaban": "berpaling",
+    "lagu": "Jangan Pernah Berubah",
+    "artis": "ST12"
+  },
+  {
+    "soal": "Aku merindukan senyummu\nYang dulu selalu menghias hari-hariku\nKapan kau kan kembali ...\nDan membuatku bahagia lagi",
+    "jawaban": "pulang",
+    "lagu": "Merindukanmu",
+    "artis": "Dash Uciha"
+  },
+  {
+    "soal": "Cinta kita tidak mungkin bersatu\nKarena perbedaan yang ada\nNamun aku tetap ...\nBahwa suatu saat nanti kita kan bersama",
+    "jawaban": "berharap",
+    "lagu": "Cinta Tidak Mungkin",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya doa yang bisa kupanjatkan\nSemoga kau bahagia di sana\nWalau bukan ... aku\nYang mendampingi hidupmu",
+    "jawaban": "bersama",
+    "lagu": "Doa",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Cinta kita berbeda keyakinan\nNamun hati kita tetap satu\nApakah ini yang dinamakan ...\nAtau hanya ujian semata",
+    "jawaban": "takdir",
+    "lagu": "Berbeda",
+    "artis": "Noah"
+  },
+  {
+    "soal": "Sesaat kau hadir, dalam kegelapan sepi\nMenyentuh hatiku yang sedang terluka\nKau bawa cahaya dalam ...\nMembuatku merasa berarti lagi",
+    "jawaban": "hidupku",
+    "lagu": "Sesaat Kau Hadir",
+    "artis": "Utha Likumahuwa"
+  },
+  {
+    "soal": "Ternyata belum siap aku\nKehilangan dirimu\nSetiap malam aku berdoa\nSemoga kau kembali ke ...",
+    "jawaban": "pelukanku",
+    "lagu": "Belum Siap Kehilangan",
+    "artis": "Stevan Pasaribu"
+  },
+  {
+    "soal": "Entah apa yang merasukimu\nHingga kau tega mengkhianati aku\nYang tulus mencintaimu\nDan selalu ... untukmu",
+    "jawaban": "ada",
+    "lagu": "Salah Apa Aku",
+    "artis": "Ilir7"
+  },
+  {
+    "soal": "Jangan kau gantung hatiku\nDengan sikap manis yang hanya sementara\nAku butuh kepastian darimu\nBukan hanya ... palsu",
+    "jawaban": "janji-janji",
+    "lagu": "Gantung",
+    "artis": "Melly Goeslaw"
+  },
+  {
+    "soal": "Tak sengaja lewat depan rumahmu\nKulihat ada janur kuning melengkung\nTanda kau telah menjadi milik ...\ndan aku harus merelakanmu",
+    "jawaban": "orang lain",
+    "lagu": "Janur Kuning",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Aku rindu setengah mati kepadamu\nSungguh ku tak bisa hidup tanpamu\nKembalilah padaku ...\nAku sangat membutuhkanmu",
+    "jawaban": "sayang",
+    "lagu": "Rindu Setengah Mati",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Tak ada lagi yang bisa kurasakan\nSelain hampa di dalam ...\nTanpa dirimu di sisiku\nSemuanya terasa begitu sunyi",
+    "jawaban": "hatiku",
+    "lagu": "Hampa",
+    "artis": "Ari Lasso"
+  },
+  {
+    "soal": "Seberapa pantas kau menyakitiku\nSeberapa jauh kau meninggalkanku\nAku tetap di sini menunggumu\nWalau kutahu kau takkan ...",
+    "jawaban": "kembali",
+    "lagu": "Seberapa Pantas",
+    "artis": "Sheila On 7"
+  },
+  {
+    "soal": "Dengarkanlah wanita pujaanku\nMalam ini akan kusampaikan\nBetapa aku ...\nDan ingin selalu hidup bersamamu",
+    "jawaban": "mencintaimu",
+    "lagu": "Wanita Pujaanku",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya angin yang bisa\nMembisikkan kata-kata rindu\nKe dalam jiwa yang paling ...\nBahwa aku sangat merindukanmu",
+    "jawaban": "dalam",
+    "lagu": "Hanya Angin",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Menghitung hari satu-satu\nAku rindu padamu\nKapan kita bisa bertemu ...\nSeperti dulu saat kita masih bersama",
+    "jawaban": "lagi",
+    "lagu": "Menghitung Hari",
+    "artis": "Krisdayanti"
+  },
+  {
+    "soal": "Cintaku luar biasa, setinggi langit di angkasa\nTakkan pernah ada yang bisa mengukur\nBetapa besarnya cintaku padamu\nKarena kau adalah ... terindah bagiku",
+    "jawaban": "anugerah",
+    "lagu": "Cintaku",
+    "artis": "Chrisye"
+  },
+  {
+    "soal": "Sudah terlalu lama aku sendiri\nSudah terlalu lama aku asyik sendiri\nLama-lama aku bosan sendiri\nKarena tak ada yang bisa kuajak ...",
+    "jawaban": "bicara",
+    "lagu": "Terlalu Lama Sendiri",
+    "artis": "Kunto Aji"
+  },
+  {
+    "soal": "Cinta ini takkan pernah mati\nWalau raga ini tak lagi ada\nKau adalah cinta sejatiku\nYang akan ... kuingat",
+    "jawaban": "selalu",
+    "lagu": "Cinta Sejati",
+    "artis": "BCL"
+  },
+  {
+    "soal": "Jangan kau pernah meragukan\nKesetiaan yang kuberikan padamu\nAku hanya milikmu ...\nDan takkan pernah berpaling",
+    "jawaban": "seorang",
+    "lagu": "Jangan Pernah Berubah",
+    "artis": "ST12"
+  },
+  {
+    "soal": "Aku merindukan senyummu\nYang dulu selalu menghias hari-hariku\nKapan kau kan kembali pulang\nDan membuatku ... lagi",
+    "jawaban": "bahagia",
+    "lagu": "Merindukanmu",
+    "artis": "Dash Uciha"
+  },
+  {
+    "soal": "Cinta kita tidak mungkin bersatu\nKarena ... yang ada\nNamun aku tetap berharap\nBahwa suatu saat nanti kita kan bersama",
+    "jawaban": "perbedaan",
+    "lagu": "Cinta Tidak Mungkin",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya doa yang bisa kupanjatkan\nSemoga kau bahagia di sana\nWalau bukan bersama aku\nYang ... hidupmu",
+    "jawaban": "mendampingi",
+    "lagu": "Doa",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Cinta kita berbeda keyakinan\nNamun hati kita tetap satu\nApakah ini yang dinamakan takdir\nAtau hanya ... semata",
+    "jawaban": "ujian",
+    "lagu": "Berbeda",
+    "artis": "Noah"
+  },
+  {
+    "soal": "Sesaat kau hadir, dalam kegelapan sepi\nMenyentuh hatiku yang sedang terluka\nKau bawa ... dalam hidupku\nMembuatku merasa berarti lagi",
+    "jawaban": "cahaya",
+    "lagu": "Sesaat Kau Hadir",
+    "artis": "Utha Likumahuwa"
+  },
+  {
+    "soal": "Ternyata belum siap aku\nKehilangan dirimu\nSetiap malam aku berdoa\nSemoga kau ... ke pelukanku",
+    "jawaban": "kembali",
+    "lagu": "Belum Siap Kehilangan",
+    "artis": "Stevan Pasaribu"
+  },
+  {
+    "soal": "Entah apa yang merasukimu\nHingga kau tega mengkhianati aku\nYang tulus mencintaimu\nDan ... ada untukmu",
+    "jawaban": "selalu",
+    "lagu": "Salah Apa Aku",
+    "artis": "Ilir7"
+  },
+  {
+    "soal": "Jangan kau gantung hatiku\nDengan sikap manis yang hanya sementara\nAku butuh kepastian darimu\nBukan hanya janji-janji ...",
+    "jawaban": "palsu",
+    "lagu": "Gantung",
+    "artis": "Melly Goeslaw"
+  },
+  {
+    "soal": "Tak sengaja lewat depan rumahmu\nKulihat ada janur kuning melengkung\nTanda kau telah menjadi milik orang lain\ndan aku harus ...",
+    "jawaban": "merelakanmu",
+    "lagu": "Janur Kuning",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Aku rindu setengah mati kepadamu\nSungguh ku tak bisa hidup tanpamu\n... padaku sayang\nAku sangat membutuhkanmu",
+    "jawaban": "kembalilah",
+    "lagu": "Rindu Setengah Mati",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Tak ada lagi yang bisa kurasakan\nSelain hampa di dalam hatiku\nTanpa dirimu di ...\nSemuanya terasa begitu sunyi",
+    "jawaban": "sisiku",
+    "lagu": "Hampa",
+    "artis": "Ari Lasso"
+  },
+  {
+    "soal": "Seberapa pantas kau menyakitiku\nSeberapa jauh kau meninggalkanku\nAku tetap di sini menunggumu\nWalau kutahu kau ... kembali",
+    "jawaban": "takkan",
+    "lagu": "Seberapa Pantas",
+    "artis": "Sheila On 7"
+  },
+  {
+    "soal": "Dengarkanlah wanita pujaanku\nMalam ini akan kusampaikan\nBetapa aku mencintaimu\nDan ingin selalu hidup ...",
+    "jawaban": "bersamamu",
+    "lagu": "Wanita Pujaanku",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya angin yang bisa\nMembisikkan kata-kata rindu\nKe dalam jiwa yang paling dalam\nBahwa aku sangat ...",
+    "jawaban": "merindukanmu",
+    "lagu": "Hanya Angin",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Menghitung hari satu-satu\nAku rindu padamu\nKapan kita bisa bertemu lagi\n... dulu saat kita masih bersama",
+    "jawaban": "seperti",
+    "lagu": "Menghitung Hari",
+    "artis": "Krisdayanti"
+  },
+  {
+    "soal": "Cintaku luar biasa, setinggi langit di angkasa\nTakkan pernah ada yang bisa mengukur\nBetapa besarnya cintaku padamu\nKarena kau adalah anugerah ... bagiku",
+    "jawaban": "terindah",
+    "lagu": "Cintaku",
+    "artis": "Chrisye"
+  },
+  {
+    "soal": "Sudah terlalu lama aku sendiri\nSudah terlalu lama aku asyik sendiri\nLama-lama aku bosan sendiri\nKarena tak ada yang bisa ... bicara",
+    "jawaban": "kuajak",
+    "lagu": "Terlalu Lama Sendiri",
+    "artis": "Kunto Aji"
+  },
+  {
+    "soal": "Cinta ini takkan pernah mati\nWalau raga ini tak lagi ada\nKau adalah ... sejatiku\nYang akan selalu kuingat",
+    "jawaban": "cinta",
+    "lagu": "Cinta Sejati",
+    "artis": "BCL"
+  },
+  {
+    "soal": "Jangan kau pernah meragukan\nKesetiaan yang kuberikan padamu\nAku hanya ... seorang\nDan takkan pernah berpaling",
+    "jawaban": "milikmu",
+    "lagu": "Jangan Pernah Berubah",
+    "artis": "ST12"
+  },
+  {
+    "soal": "Aku merindukan senyummu\nYang dulu selalu menghias hari-hariku\nKapan kau kan kembali pulang\nDan ... bahagia lagi",
+    "jawaban": "membuatku",
+    "lagu": "Merindukanmu",
+    "artis": "Dash Uciha"
+  },
+  {
+    "soal": "Cinta kita tidak mungkin bersatu\nKarena perbedaan yang ...\nNamun aku tetap berharap\nBahwa suatu saat nanti kita kan bersama",
+    "jawaban": "ada",
+    "lagu": "Cinta Tidak Mungkin",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya doa yang bisa kupanjatkan\nSemoga kau bahagia di sana\nWalau bukan bersama ...\nYang mendampingi hidupmu",
+    "jawaban": "aku",
+    "lagu": "Doa",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Cinta kita berbeda keyakinan\nNamun hati kita tetap satu\nApakah ini yang ... takdir\nAtau hanya ujian semata",
+    "jawaban": "dinamakan",
+    "lagu": "Berbeda",
+    "artis": "Noah"
+  },
+  {
+    "soal": "Sesaat kau hadir, dalam kegelapan sepi\nMenyentuh hatiku yang sedang terluka\nKau bawa cahaya dalam hidupku\nMembuatku merasa ... lagi",
+    "jawaban": "berarti",
+    "lagu": "Sesaat Kau Hadir",
+    "artis": "Utha Likumahuwa"
+  },
+  {
+    "soal": "Ternyata belum siap aku\nKehilangan dirimu\nSetiap malam aku berdoa\n... kau kembali ke pelukanku",
+    "jawaban": "semoga",
+    "lagu": "Belum Siap Kehilangan",
+    "artis": "Stevan Pasaribu"
+  },
+  {
+    "soal": "Entah apa yang merasukimu\nHingga kau tega mengkhianati aku\nYang tulus ...\nDan selalu ada untukmu",
+    "jawaban": "mencintaimu",
+    "lagu": "Salah Apa Aku",
+    "artis": "Ilir7"
+  },
+  {
+    "soal": "Jangan kau gantung hatiku\nDengan sikap manis yang hanya sementara\nAku butuh kepastian ...\nBukan hanya janji-janji palsu",
+    "jawaban": "darimu",
+    "lagu": "Gantung",
+    "artis": "Melly Goeslaw"
+  },
+  {
+    "soal": "Tak sengaja lewat depan rumahmu\nKulihat ada janur kuning melengkung\nTanda kau telah menjadi ... orang lain\ndan aku harus merelakanmu",
+    "jawaban": "milik",
+    "lagu": "Janur Kuning",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Aku rindu setengah mati kepadamu\nSungguh ku tak bisa hidup tanpamu\nKembalilah padaku sayang\nAku ... membutuhkanmu",
+    "jawaban": "sangat",
+    "lagu": "Rindu Setengah Mati",
+    "artis": "D'Masiv"
+  },
+  {
+    "soal": "Tak ada lagi yang bisa kurasakan\nSelain hampa di dalam hatiku\n... dirimu di sisiku\nSemuanya terasa begitu sunyi",
+    "jawaban": "tanpa",
+    "lagu": "Hampa",
+    "artis": "Ari Lasso"
+  },
+  {
+    "soal": "Seberapa pantas kau menyakitiku\nSeberapa jauh kau meninggalkanku\nAku tetap di sini menunggumu\nWalau ... kau takkan kembali",
+    "jawaban": "kutahu",
+    "lagu": "Seberapa Pantas",
+    "artis": "Sheila On 7"
+  },
+  {
+    "soal": "Dengarkanlah wanita pujaanku\nMalam ini akan kusampaikan\nBetapa ... mencintaimu\nDan ingin selalu hidup bersamamu",
+    "jawaban": "aku",
+    "lagu": "Wanita Pujaanku",
+    "artis": "Kangen Band"
+  },
+  {
+    "soal": "Hanya angin yang bisa\nMembisikkan kata-kata rindu\nKe dalam jiwa yang paling dalam\nBahwa aku ... merindukanmu",
+    "jawaban": "sangat",
+    "lagu": "Hanya Angin",
+    "artis": "Dewa 19"
+  },
+  {
+    "soal": "Menghitung hari satu-satu\nAku rindu padamu\nKapan kita bisa bertemu lagi\nSeperti dulu saat kita ... bersama",
+    "jawaban": "masih",
+    "lagu": "Menghitung Hari",
+    "artis": "Krisdayanti"
+  },
+  {
+    "soal": "Cintaku luar biasa, setinggi langit di angkasa\nTakkan pernah ada yang bisa mengukur\nBetapa besarnya cintaku padamu\nKarena kau adalah anugerah terindah ...",
+    "jawaban": "bagiku",
+    "lagu": "Cintaku",
+    "artis": "Chrisye"
+  }
+]

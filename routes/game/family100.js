@@ -1,26 +1,26 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../../config');
-const soalData = require('./data/asahotak.json'); 
+const familyData = require('./data/family100.json'); // Pastikan path benar
 
 router.get('/', (req, res) => {
     try {
-        const randomIndex = Math.floor(Math.random() * soalData.length);
-        const result = soalData[randomIndex];
+        const randomIndex = Math.floor(Math.random() * familyData.length);
+        const result = familyData[randomIndex];
 
         res.json({
             status: true,
             creator: config.creator,
             result: {
-                soal: result.pertanyaan,
-                jawaban: result.jawaban
+                soal: result.soal,
+                jawaban: result.jawaban // Ini akan berupa array
             }
         });
     } catch (e) {
         res.status(500).json({ 
             status: false, 
             creator: config.creator,
-            message: "Gagal memuat data soal" 
+            message: "Gagal memuat soal Family 100" 
         });
     }
 });

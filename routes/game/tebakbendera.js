@@ -1,18 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../../config');
-const soalData = require('./data/asahotak.json'); 
+const benderaData = require('./data/tebakbendera.json');
 
 router.get('/', (req, res) => {
     try {
-        const randomIndex = Math.floor(Math.random() * soalData.length);
-        const result = soalData[randomIndex];
+        const randomIndex = Math.floor(Math.random() * benderaData.length);
+        const result = benderaData[randomIndex];
 
         res.json({
             status: true,
             creator: config.creator,
             result: {
-                soal: result.pertanyaan,
+                img: result.img,
                 jawaban: result.jawaban
             }
         });
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
         res.status(500).json({ 
             status: false, 
             creator: config.creator,
-            message: "Gagal memuat data soal" 
+            message: "Gagal memuat kuis tebak bendera" 
         });
     }
 });
